@@ -78,12 +78,6 @@ Updated to **4.6.5** as Version 2 branch has been deprecated.
 
 > JavaScript client library for the OpenWhisk platform
 
-#### `"pkgcloud": "^1.4.0"`
-
-> An infrastructure-as-a-service agnostic cloud library for node.js
-
-Updated to **1.5.0** due to multple vulnerabilities.
-
 #### `"process": "^0.11.9"`
 
 > Process information for node.js and browsers
@@ -258,6 +252,13 @@ No MongoDB available.
 > The official CouchDB client for Node.js
 
 No CouchDB available.
+
+
+#### `"pkgcloud": "^1.4.0"`
+
+> An infrastructure-as-a-service agnostic cloud library for node.js
+
+Updated to **1.5.0** due to multiple vulnerabilities, then removed, as issues have not been fixed in newer version.
 
 
 #### `"redis": "^2.6.3"`
