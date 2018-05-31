@@ -1,4 +1,6 @@
 const _ = require("lodash/fp");
+const winston = require("winston");
+require("winston-loggly-bulk");
 
 function sanitize(o) {
     return _.fromPairs(Object.entries(o).map(([k, v]) => {
@@ -11,9 +13,6 @@ function sanitize(o) {
 }
 
 function main(params) {
-  const winston = require("winston");
-  require("winston-loggly-bulk");
-
   winston.add(winston.transports.Loggly, {
     token: params.LOGGLY_KEY,
     subdomain: params.LOGGLY_HOST,
