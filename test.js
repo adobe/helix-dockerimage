@@ -14,7 +14,7 @@ function sanitize(o) {
   );
 }
 
-function main(params) {
+function wrap(f) {
   try {
     winston.add(winston.transports.Loggly, {
       token: params.LOGGLY_KEY,
@@ -24,7 +24,18 @@ function main(params) {
     });
   } catch (e) {}
 
-  winston.log("info", "Hello World from Node.js!");
+  return function(p) {
+    winston.log("debug", "before");
+    try {
+      return f(p, winston);
+    } catch (e) {
+        window.log("error", e);
+    }
+  };
+}
+
+function main(params, logger) {
+  logger.log("info", "Hello World from Node.js!");
 
   return {
     hello: "world",
@@ -34,4 +45,4 @@ function main(params) {
   };
 }
 
-module.exports.main = main;
+module.exports.main = wrap(main);
