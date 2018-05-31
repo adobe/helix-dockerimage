@@ -12,7 +12,6 @@ echo "Building $projects"
 for project in $projects; do
   if [[ "$project" == Dockerfile ]];then
     docker build -t githop -f $project . || exit 1
-    exit 0
     docker tag githop trieloff/custom-ow-nodejs8:latest
     docker push trieloff/custom-ow-nodejs8:latest
   else
