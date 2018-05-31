@@ -3,22 +3,26 @@ const winston = require("winston");
 require("winston-loggly-bulk");
 
 function sanitize(o) {
-    return _.fromPairs(Object.entries(o).map(([k, v]) => {
-        if (k.match(/^[A-Z0-9_]+$/)) {
-            return [k, k.replace(/./g, "•")];
-        } else {
-            return [k, v];
-        }
-    }));
+  return _.fromPairs(
+    Object.entries(o).map(([k, v]) => {
+      if (k.match(/^[A-Z0-9_]+$/)) {
+        return [k, k.replace(/./g, "•")];
+      } else {
+        return [k, v];
+      }
+    })
+  );
 }
 
 function main(params) {
-  winston.add(winston.transports.Loggly, {
-    token: params.LOGGLY_KEY,
-    subdomain: params.LOGGLY_HOST,
-    tags: ["Winston-NodeJS"],
-    json: true
-  });
+  try {
+    winston.add(winston.transports.Loggly, {
+      token: params.LOGGLY_KEY,
+      subdomain: params.LOGGLY_HOST,
+      tags: ["Winston-NodeJS"],
+      json: true
+    });
+  } catch (e) {}
 
   winston.log("info", "Hello World from Node.js!");
 
@@ -31,5 +35,3 @@ function main(params) {
 }
 
 module.exports.main = main;
-
-console.log(sanitize({ "HEY": "ho", "foo": "bar" }));
