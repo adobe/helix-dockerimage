@@ -4,9 +4,8 @@ WORKDIR /nodejsAction
 
 COPY package.json /nodejsAction/package.json
 
-RUN rm -rf /nodejsAction/node_modules
-
-RUN npm install \
+RUN rm -rf /nodejsAction/node_modules \
+    && npm install \
     && npm cache clean --force
 
 RUN cat /nodejsAction/package.json
