@@ -268,6 +268,13 @@ Updated to **1.5.0** due to multiple vulnerabilities, then removed, as issues ha
 No Redis service available.
 
 
+#### "rimraf": "^2.5.4"
+
+> deep deletion module for node (like `rm -rf`)
+
+Use `fs-extra` instead.
+
+
 #### `"sendgrid": "^4.7.1"`
 
 > This library allows you to quickly and easily use the SendGrid Web API v3 via Node.js.
@@ -323,3 +330,10 @@ Vendor stuff.
 Use `bluebird` instead.
 
 ### Added Dependencies
+
+
+#### `"fs-extra": "^5.0.0"`
+
+> fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.
+
+A drop-in replacement for Node's `fs` module.
