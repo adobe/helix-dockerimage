@@ -12,6 +12,10 @@ Make sure you have Docker installed and are logged in to Docker Hub. The image i
 $ ./build.sh
 ```
 
+## Testing it
+
+Once the function has been deployed, it can be tested using `npm test`
+
 ## What's included
 
 The package is based on the dependency list of the original Node 6 image, whith a number of modifications:
