@@ -3,7 +3,7 @@ FROM openwhisk/action-nodejs-v8
 WORKDIR /nodejsAction
 
 COPY package.json /nodejsAction/package.json
-COPY wrap.js /nodejsAction/wrap.js
+COPY action-nodejs-v8.js /nodejsAction/action-nodejs-v8.js
 
 RUN rm -rf /nodejsAction/node_modules \
     && npm install \
