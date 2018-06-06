@@ -9,7 +9,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@adobe/openwhisk-loggly-wrapper": "0.1.0-SNAPSHOT.2540",
+    "@adobe/openwhisk-loggly-wrapper": "*",
     "async": "^2.1.4",
     "body-parser": "1.18.2",
     "btoa": "^1.1.2",
