@@ -108,7 +108,9 @@ function sanitize(o) {
           });
         return retval;
       } catch (e) {
-        console.error("ERROR in wrap", e);
+        if (!e.toString().indexOf('Transport already attached')) {
+          console.error("ERROR in wrap", e);
+        }
       }
     };
   }
