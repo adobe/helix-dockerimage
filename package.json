@@ -41,7 +41,15 @@
     "ws": "^1.1.1",
     "xml2js": "^0.4.17",
     "xmlhttprequest": "^1.8.0",
-    "yauzl": "^2.7.0"
+    "yauzl": "^2.7.0",
+    "rehype-stringify": "^3.0.0",
+    "remark-frontmatter": "^1.2.0",
+    "remark-html": "^7.0.0",
+    "remark-parse": "^5.0.0",
+    "remark-rehype": "^3.0.0",
+    "strip-markdown": "^3.0.1",
+    "unified": "^6.1.6",
+    "yaml": "^0.3.0"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
