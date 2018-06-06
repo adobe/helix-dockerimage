@@ -10,5 +10,5 @@ function echo(params, secrets, logger) {
     packages: require("./package.json").dependencies
   };
 }
-const main = require('./action-nodejs-v8')(echo);
+const main = require('@adobe/openwhisk-loggly-wrapper')(echo);
 module.exports.main = main;
