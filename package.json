@@ -1,7 +1,7 @@
 {
   "name": "action-nodejs-v8",
   "version": "1.0.0",
-  "main": "wrap.js",
+  "main": "action-nodejs-v8.js",
   "description": "Custon Apache OpenWhisk NodeJS Runtime for Project Helix",
   "repository": {
     "type": "git",
