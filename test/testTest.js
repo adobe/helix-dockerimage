@@ -33,9 +33,9 @@ describe("DEPLOYED: Testing Deployed functions", () => {
           "Incorrect winston version"
         );
         assert.equal(
-          r.packages.webpack,
-          require("./../package.json").dependencies.webpack,
-          "Incorrect webpack version"
+          r.packages.parcel-bundler,
+          require("./../package.json").dependencies.parcel-bundler,
+          "Incorrect parcel-bundler version"
         );
         assert.equal(
             r.params.debug,
