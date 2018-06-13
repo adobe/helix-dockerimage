@@ -33,11 +33,6 @@ describe("DEPLOYED: Testing Deployed functions", () => {
           "Incorrect winston version"
         );
         assert.equal(
-          r.packages.parcel-bundler,
-          require("./../package.json").dependencies.parcel-bundler,
-          "Incorrect parcel-bundler version"
-        );
-        assert.equal(
             r.params.debug,
             myparams.debug,
             "Parameters don't match"
