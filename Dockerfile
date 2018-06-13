@@ -1,4 +1,5 @@
 FROM openwhisk/action-nodejs-v8
+MAINTAINER Lars Trieloff
 
 WORKDIR /nodejsAction
 
