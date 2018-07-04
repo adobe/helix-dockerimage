@@ -28,9 +28,9 @@ describe("DEPLOYED: Testing Deployed functions", () => {
           "Incorrect node.js version on OpenWhisk"
         );
         assert.equal(
-          r.packages.winston,
-          require("./../package.json").dependencies.winston,
-          "Incorrect winston version"
+          r.packages["@adobe/openwhisk-loggly-wrapper"],
+          require("./../package.json").dependencies["@adobe/openwhisk-loggly-wrapper"],
+          "Incorrect @adobe/openwhisk-loggly-wrapper version"
         );
         assert.equal(
             r.params.debug,
