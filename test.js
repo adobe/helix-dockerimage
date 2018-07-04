@@ -1,4 +1,4 @@
-function echo(params, secrets, logger) {
+function echo(params, secrets, logger = console) {
   logger.log("info", "Hello World from Node.js!");
 
   return {
@@ -10,5 +10,5 @@ function echo(params, secrets, logger) {
     packages: require("./package.json").dependencies
   };
 }
-const main = require('@adobe/openwhisk-loggly-wrapper')(echo);
-module.exports.main = main;
+//const main = require('@adobe/openwhisk-loggly-wrapper')(echo);
+module.exports.main = (...args) => require('@adobe/openwhisk-loggly-wrapper')(echo, ...args);
