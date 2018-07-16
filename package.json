@@ -10,8 +10,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@adobe/htlengine": "^1.0.2-SNAPSHOT.68",
-    "@adobe/hypermedia-pipeline": "^0.3.2-SNAPSHOT.53",
-    "@adobe/openwhisk-loggly-wrapper": "^0.2.0-SNAPSHOT.27",
+    "@adobe/hypermedia-pipeline": "^0.3.2-SNAPSHOT.78",
+    "@adobe/openwhisk-loggly-wrapper": "^0.2.0-SNAPSHOT.35",
     "async": "^2.1.4",
     "body-parser": "1.18.2",
     "btoa": "^1.1.2",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "mocha": "^5.2.0",
-    "parcel-bundler": "^1.9.4"
+    "parcel-bundler": "^1.9.7"
   },
   "scripts": {
     "test": "mocha --grep DEPLOYED"
