@@ -24,7 +24,7 @@ describe("DEPLOYED: Testing Deployed functions", () => {
         console.log(r);
         assert.strictEqual(
           r.version.node,
-          "8.11.1",
+          "8.11.3",
           "Incorrect node.js version on OpenWhisk"
         );
         assert.equal(
