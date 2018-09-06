@@ -9,9 +9,9 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@adobe/htlengine": "^1.0.2-SNAPSHOT.68",
-    "@adobe/hypermedia-pipeline": "^0.3.2-SNAPSHOT.95",
-    "@adobe/openwhisk-loggly-wrapper": "^0.2.0-SNAPSHOT.41",
+    "@adobe/htlengine": "^1.0.3",
+    "@adobe/hypermedia-pipeline": "^0.3.3",
+    "@adobe/openwhisk-loggly-wrapper": "^0.2.1",
     "async": "^2.1.4",
     "body-parser": "1.18.2",
     "btoa": "^1.1.2",
