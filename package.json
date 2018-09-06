@@ -1,6 +1,6 @@
 {
   "name": "action-nodejs-v8",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "action-nodejs-v8.js",
   "description": "Custon Apache OpenWhisk NodeJS Runtime for Project Helix",
   "repository": {
@@ -10,8 +10,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@adobe/htlengine": "^1.0.3",
-    "@adobe/hypermedia-pipeline": "^0.3.3",
-    "@adobe/openwhisk-loggly-wrapper": "^0.2.1",
+    "@adobe/hypermedia-pipeline": "^0.4.0",
+    "@adobe/openwhisk-loggly-wrapper": "^0.3.0",
     "async": "^2.1.4",
     "body-parser": "1.18.2",
     "btoa": "^1.1.2",
