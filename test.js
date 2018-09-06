@@ -1,5 +1,5 @@
-function echo(params, secrets, logger = console) {
-  logger.log("info", "Hello World from Node.js!");
+function echo(params) {
+  params.__ow_logger.log("info", "Hello World from Node.js!");
 
   return {
     action: process.env["__OW_ACTION_NAME"],
