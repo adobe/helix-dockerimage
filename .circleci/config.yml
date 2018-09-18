@@ -1,0 +1,61 @@
+version: 2
+jobs:
+  custom-dockerimage: 
+    machine: true
+    steps: 
+      - checkout
+      - run:
+          name: Build Dockerimage
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            bash build.sh Dockerfile
+
+
+
+  echo-function:
+    docker:
+      # specify the version you desire here
+      # using the clojurescript image because it has node, java, antlr and the openwhisk tools
+      - image: trieloff/githop:clojurescript
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Update function
+          command: wsk --apihost $WSK_HOST --auth $WSK_KEY action update docker-test test.js --docker trieloff/custom-ow-nodejs8:latest --param LOGGLY_KEY $LOGGLY_KEY --param LOGGLY_HOST $LOGGLY_HOST --main module.exports.main
+
+      - run:
+          name: Validate function
+          command: |
+            wsk --apihost $WSK_HOST --auth $WSK_KEY action invoke docker-test --blocking --result
+            wsk --apihost $WSK_HOST --auth $WSK_KEY action invoke docker-test --blocking --result | jq ".version.node" | grep -e '"8'
+
+      - run: 
+          name: Installing Test Dependencies
+          command: npm install && npm install mocha-junit-reporter
+
+      # run integration tests!
+      - run: mkdir junit
+      - run:
+          name: Running Tests
+          command: ./node_modules/.bin/mocha test --reporter mocha-junit-reporter
+          environment:
+            MOCHA_FILE: junit/test-results.xml
+          when: always
+
+      - store_test_results:
+          path: junit
+      - store_artifacts:
+          path: junit 
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - custom-dockerimage
+      - echo-function:
+          requires:
+            - custom-dockerimage
