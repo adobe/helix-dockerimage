@@ -10,7 +10,7 @@ Fortunately, OpenWhisk also supports the creation of custom Docker images, so we
 [![GitHub issues](https://img.shields.io/github/issues/adobe/helix-dockerimage.svg)](https://github.com/adobe/helix-dockerimage/issues)
 [![Docker Image Size](https://img.shields.io/microbadger/image-size/trieloff/custom-ow-nodejs8.svg)](https://hub.docker.com/r/trieloff/custom-ow-nodejs8/)
 
-## Building it
+## Building It
 
 Make sure you have Docker installed and are logged in to Docker Hub. The image is published under the `trieloff` namespace.
 
