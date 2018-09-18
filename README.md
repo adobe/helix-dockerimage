@@ -8,6 +8,7 @@ Fortunately, OpenWhisk also supports the creation of custom Docker images, so we
 [![CircleCI](https://img.shields.io/circleci/project/github/adobe/helix-dockerimage.svg)](https://circleci.com/gh/adobe/helix-dockerimage)
 [![GitHub license](https://img.shields.io/github/license/adobe/helix-dockerimage.svg)](https://github.com/adobe/helix-dockerimage/blob/master/LICENSE.txt)
 [![GitHub issues](https://img.shields.io/github/issues/adobe/helix-dockerimage.svg)](https://github.com/adobe/helix-dockerimage/issues)
+[![Docker Image Size](https://img.shields.io/microbadger/image-size/trieloff/custom-ow-nodejs8.svg)](https://hub.docker.com/r/trieloff/custom-ow-nodejs8/)
 
 ## Building it
 
