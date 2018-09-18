@@ -55,6 +55,8 @@
     "mocha": "^5.2.0"
   },
   "scripts": {
-    "test": "mocha --grep DEPLOYED"
+    "test": "mocha --grep DEPLOYED",
+    "postversion": "git push origin master --follow-tags",
+    "delete-git-tag": "git tag -d v$npm_package_version && git push origin :v$npm_package_version"
   }
 }
