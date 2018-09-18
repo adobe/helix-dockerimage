@@ -19,6 +19,7 @@ for project in $projects; do
     docker tag githop trieloff/custom-pw-nodejs8:$VERSION
     docker push trieloff/custom-ow-nodejs8:latest
     docker push trieloff/custom-ow-nodejs8:build-$CIRCLE_BUILD_NUM
+    docker push trieloff/custom-ow-nodejs8:$VERSION
   else
     shortname=$(echo $project | sed -e "s/\\..*//")
     docker build -t custom-ow-nodejs8:$(echo $project | sed -e "s/\\..*//") -f $project . || exit 1
