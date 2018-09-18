@@ -16,7 +16,7 @@ for project in $projects; do
     docker build -t githop -f $project . || exit 1
     docker tag githop trieloff/custom-ow-nodejs8:latest
     docker tag githop trieloff/custom-ow-nodejs8:build-$CIRCLE_BUILD_NUM
-    docker tag githop trieloff/custom-pw-nodejs8:$VERSION
+    docker tag githop trieloff/custom-ow-nodejs8:$VERSION
     docker push trieloff/custom-ow-nodejs8:latest
     docker push trieloff/custom-ow-nodejs8:build-$CIRCLE_BUILD_NUM
     docker push trieloff/custom-ow-nodejs8:$VERSION
