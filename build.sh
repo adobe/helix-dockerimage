@@ -9,11 +9,14 @@ fi
 
 echo "Building $projects"
 
+VERSION=$(cat package.json | jq -er .version)
+
 for project in $projects; do
   if [[ "$project" == Dockerfile ]];then
     docker build -t githop -f $project . || exit 1
     docker tag githop trieloff/custom-ow-nodejs8:latest
     docker tag githop trieloff/custom-ow-nodejs8:build-$CIRCLE_BUILD_NUM
+    docker tag githop trieloff/custom-pw-nodejs8:$VERSION
     docker push trieloff/custom-ow-nodejs8:latest
     docker push trieloff/custom-ow-nodejs8:build-$CIRCLE_BUILD_NUM
   else
