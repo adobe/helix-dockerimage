@@ -12,3 +12,5 @@ RUN /bin/bash -l -c "\
        source /home/gitpod/.nvm/nvm.sh \
     && nvm use default \
     && npm install -g @adobe/helix-cli"
+
+USER root
