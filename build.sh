@@ -22,8 +22,8 @@ for project in $projects; do
     docker push trieloff/custom-ow-nodejs8:$VERSION
   else
     shortname=$(echo $project | sed -e "s/\\..*//")
-    docker build -t custom-ow-nodejs8:$(echo $project | sed -e "s/\\..*//") -f $project . || exit 1
-    docker tag custom-ow-nodejs8:$(echo $project | sed -e "s/\\..*//") trieloff/custom-ow-nodejs8:$(echo $project | sed -e "s/\\..*//")
-    docker push trieloff/custom-ow-nodejs8:$(echo $project | sed -e "s/\\..*//")
+    docker build -t $(echo $project | sed -e "s/\\..*//"):helix -f $project . || exit 1
+    docker tag $(echo $project | sed -e "s/\\..*//"):helix trieloff/$(echo $project | sed -e "s/\\..*//"):helix
+    docker push trieloff/$(echo $project | sed -e "s/\\..*//"):helix
   fi
 done
