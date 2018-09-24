@@ -5,7 +5,7 @@ OpenWhisk comes with a one megabyte limit for function ZIP files. This can be a 
 Fortunately, OpenWhisk also supports the creation of custom Docker images, so we can circumvent this trade-off by creating a Docker image that has exactly the dependencies pre-installed that we need, without any of the stuff we don't need.
 
 ## Status
-[![CircleCI](https://img.shields.io/circleci/project/github/adobe/helix-dockerimage.svg)](https://circleci.com/gh/adobe/helix-dockerimage)
+[![CircleCI](https://img.shields.io/circleci/project/github/adobe/helix-dockerimage/master.svg)](https://circleci.com/gh/adobe/helix-dockerimage/master)
 [![GitHub license](https://img.shields.io/github/license/adobe/helix-dockerimage.svg)](https://github.com/adobe/helix-dockerimage/blob/master/LICENSE.txt)
 [![GitHub issues](https://img.shields.io/github/issues/adobe/helix-dockerimage.svg)](https://github.com/adobe/helix-dockerimage/issues)
 [![Docker Image Size](https://img.shields.io/microbadger/image-size/trieloff/custom-ow-nodejs8.svg)](https://hub.docker.com/r/trieloff/custom-ow-nodejs8/) [![Greenkeeper badge](https://badges.greenkeeper.io/adobe/helix-dockerimage.svg)](https://greenkeeper.io/)
