@@ -20,7 +20,13 @@ jobs:
           name: Build Dockerimage
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
-            bash build.sh Dockerfile gitpod.Dockerfile
+            bash build.sh Dockerfile
+
+      - run:
+          name: Build Gitpod Dockerfile
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            bash build.sh gitpod.Dockerfile
 
 
 
