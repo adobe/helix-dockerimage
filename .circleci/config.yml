@@ -4,7 +4,7 @@ jobs:
     machine: true
     steps: 
       - checkout
-      
+
       - run:
           name: prepare test git user
           command: git config --global user.email "circleci@example.com" && git config --global user.name "CircleCi Build"
@@ -20,7 +20,7 @@ jobs:
           name: Build Dockerimage
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
-            bash build.sh Dockerfile
+            bash build.sh Dockerfile gitpod.Dockerfile
 
 
 
@@ -67,7 +67,10 @@ workflows:
   version: 2
   build:
     jobs:
-      - custom-dockerimage
+      - custom-dockerimage:
+          filters:
+            only:
+              - master
       - echo-function:
           requires:
             - custom-dockerimage
