@@ -24,7 +24,7 @@ Once the function has been deployed, it can be tested using `npm test`
 
 ## What's included
 
-The package is based on the dependency list of the original Node 6 image, whith a number of modifications:
+The package is based on the dependency list of the original Node 6 image, with a number of modifications:
 
 * updated dependencies to the newest version (thanks to Greenkeeper)
 * removed deprecated and useless dependencies
