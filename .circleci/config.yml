@@ -73,11 +73,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - custom-dockerimage:
-          filters:
-            branches:
-                only:
-                  - master
+      - custom-dockerimage
       - echo-function:
           requires:
             - custom-dockerimage
