@@ -11,10 +11,19 @@ jobs:
       - run:
           name: version pre-release
           command: npm version prerelease --preid=pre -m "Release %s [ci skip]"
+          filters:
+            branches:
+                only:
+                  - master
+                  
       # unfortunately we cannot create a release commit with no tag with `npm version`, so we need to delete it here again
       - run:
           name: delete pre-release tag
           command: npm run delete-git-tag
+          filters:
+            branches:
+                only:
+                  - master
 
       - run:
           name: Build Dockerimage
@@ -27,6 +36,10 @@ jobs:
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             bash build.sh gitpod.Dockerfile
+          filters:
+            branches:
+                only:
+                  - master
 
 
 
