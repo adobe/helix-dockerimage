@@ -29,7 +29,7 @@ jobs:
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             bash build.sh gitpod.Dockerfile
 
-branch-dockerimage: 
+  branch-dockerimage: 
     machine: true
     steps: 
       - checkout
