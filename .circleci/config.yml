@@ -45,7 +45,7 @@ branch-dockerimage:
             bash build.sh Dockerfile
 
 
-  echo-function:
+echo-function:
     docker:
       # specify the version you desire here
       # using the clojurescript image because it has node, java, antlr and the openwhisk tools
@@ -89,15 +89,15 @@ workflows:
   build:
     jobs:
       - branch-dockerimage:
-        filters:
-            branches:
-                ignore:
-                  - master
+            filters:
+                branches:
+                    ignore:
+                    - master
       - custom-dockerimage:
-        filters:
-            branches:
-                only:
-                  - master
+            filters:
+                branches:
+                    only:
+                        - master
       - echo-function:
           requires:
             - custom-dockerimage
