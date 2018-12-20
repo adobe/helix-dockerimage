@@ -11,7 +11,7 @@
   "dependencies": {
     "@adobe/htlengine": "2.0.0",
     "@adobe/hypermedia-pipeline": "0.8.0",
-    "@adobe/openwhisk-loggly-wrapper": "^0.4.0",
+    "@adobe/openwhisk-loggly-wrapper": "^0.4.1",
     "async": "^2.1.4",
     "body-parser": "^1.18.3",
     "btoa": "^1.1.2",
