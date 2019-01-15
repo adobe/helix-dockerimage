@@ -45,7 +45,7 @@
     "superagent": "4.0.0",
     "tmp": "^0.0.33",
     "uuid": "^3.3.2",
-    "validator": "10.9.0",
+    "validator": "10.11.0",
     "ws": "^6.1.2",
     "xml2js": "^0.4.17",
     "xmlhttprequest": "^1.8.0",
