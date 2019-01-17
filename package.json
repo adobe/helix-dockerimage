@@ -9,7 +9,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@adobe/htlengine": "2.0.0",
+    "@adobe/htlengine": "2.1.1",
     "@adobe/hypermedia-pipeline": "0.8.0",
     "@adobe/openwhisk-loggly-wrapper": "0.4.0",
     "async": "^2.1.4",
