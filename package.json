@@ -1,6 +1,6 @@
 {
   "name": "action-nodejs-v8",
-  "version": "1.2.1-64",
+  "version": "1.2.1-65",
   "main": "action-nodejs-v8.js",
   "description": "Custon Apache OpenWhisk NodeJS Runtime for Project Helix",
   "repository": {
