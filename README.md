@@ -1,3 +1,5 @@
+## DEPRECATED ⚠️ - This image is no longer maintained.
+
 # Custom Docker Images for OpenWhisk
 
 OpenWhisk comes with a one megabyte limit for function ZIP files. This can be a too harsh limit for many practical purposes. In addition, the Node 6 action comes with a long list of pre-packaged depdendencies, including some of the most popular NPM packages. The newer Node 8 action does not include any pre-packaged dependencies, which means we are forced to trade-off between using a modern Node version or having access to useful packages.
